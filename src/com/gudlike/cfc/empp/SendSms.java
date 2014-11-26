@@ -17,24 +17,23 @@ import EcpOpen.http.Extend.MCSM.sendSms;
 public class SendSms {
 	public static void main(String[] args) {
 		// 设置Constants中的常量值，web工程中应保证这些值能持久化
-		Constants.extendUrl = "http://open.ecplive.cn:8080"
-				+ "/EcpOpen/services/ExtendService/extendService";
-		Constants.spid = "";
-		Constants.serviceKey = "";
-		Constants.appid = "";
-		Constants.appkey = "";
+		Constants.extendUrl = "http://open.ecplive.cn:8080/EcpOpen/services/ExtendService/extendService";
+		Constants.spid = "22487930570003";
+		Constants.serviceKey = "bec67614807546f48846f976a5ecf681";
+		Constants.appid = "01156021";
+		Constants.appkey = "a9c35c476cc94182a46e4d49e6e54da1";
 		Constants.type = "1";
-		SimpleReference simpleRef = new SimpleReference();
-		simpleRef.setEndpoint("http://127.0.0.1:8080/");
-		simpleRef.setInterfaceName("notifySmsDeliveryStatus");
-		simpleRef.setCorrelator("");
+//		SimpleReference simpleRef = new SimpleReference();
+//		simpleRef.setEndpoint("http://127.0.0.1:8080/");
+//		simpleRef.setInterfaceName("notifySmsDeliveryStatus");
+//		simpleRef.setCorrelator("");
 		// 实例化sendSms接口类
 		sendSms sendSmsExam = new sendSms();
 		try {
 			sendSmsExam.init();
 			// 添加必要参数，详见各接口API文档 
 			// 22487930570003   38949020
-			sendSmsExam.setAccount("22487930570003");// 05723333333
+			sendSmsExam.setAccount("38949020");// 05723333333
 			sendSmsExam.setDestinationAddresses("18621807761");
 			sendSmsExam.setMessage("test123");
 			// sendSmsExam.setTimer(t);
